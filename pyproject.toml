@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mayaz"
+version = "1.0.0"
+description = "MayaZ: small calibrated decision models (17M / 32M / 68M) for CPU-only and in-browser inference"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["numpy==2.5.4", "onnxruntime==1.23.2", "tokenizers==0.23.3"]
+
+[project.optional-dependencies]
+server = ["fastapi==0.141.1", "uvicorn==0.52.4"]
+dev = ["pytest==9.1.1", "ruff==0.17.0", "onnx==1.19.1", "httpx==0.28.1"]
+
+[project.urls]
+Homepage = "https://github.com/acl-research/MayaZ"
+Models = "https://huggingface.co/acl-research"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mayaz = ["assets/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src", "server"]
+addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

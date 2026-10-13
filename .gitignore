@@ -1,0 +1,28 @@
+# model files (downloaded from the release or the Hub, never committed)
+*.onnx
+*.safetensors
+/models/
+server/artifacts/*.onnx
+
+# secrets
+.env
+*.env
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# web
+web/node_modules/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
