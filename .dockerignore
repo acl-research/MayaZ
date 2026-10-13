@@ -1,0 +1,11 @@
+# Build context is the repo root; the image needs only server/, src/mayaz/ and the model fetched at build time.
+**/*.onnx
+**/*.safetensors
+models/
+web/
+tests/
+.git/
+.venv/
+**/__pycache__/
+*.md
+!server/README.md

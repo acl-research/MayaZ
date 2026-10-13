@@ -1,0 +1,6 @@
+# Server runtime, pinned. onnxruntime and tokenizers must equal requirements-dev.txt (export-verified).
+fastapi==0.141.1
+uvicorn==0.52.4
+onnxruntime==1.23.2
+tokenizers==0.23.3
+numpy==2.5.4

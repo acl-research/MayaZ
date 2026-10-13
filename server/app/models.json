@@ -1,0 +1,76 @@
+{
+ "default": "mayaz-32m",
+ "tiers": {
+  "mayaz-17m": {
+   "file": "mayaz-17m.onnx",
+   "temperatures": "temperatures-mayaz-17m.json",
+   "backbone": "jhu-clsp/ettin-encoder-17m",
+   "precision": "fp32",
+   "asset_url": "https://github.com/acl-research/MayaZ/releases/download/v1.0.0/mayaz-17m.onnx",
+   "sha256": "0a0a9827606a8c095b71fe6bbe609ee95ce15f5d2da692724b8737f298c1375b",
+   "status": "ready",
+   "params": 17684480,
+   "bench_512mb_0.1cpu": {
+    "p50_ms": 600,
+    "p95_ms": 2198,
+    "peak_rss_mb": 241.7
+   },
+   "verdict": "fits",
+   "hf_repo": "acl-research/MayaZ-17M",
+   "hf_file": "mayaz_fp32.onnx",
+   "hf_variants": [
+    "fp32",
+    "int8",
+    "int8_embed8"
+   ],
+   "max_tokens": 1536
+  },
+  "mayaz-32m": {
+   "file": "mayaz-32m.onnx",
+   "temperatures": "temperatures-mayaz-32m.json",
+   "backbone": "jhu-clsp/ettin-encoder-32m",
+   "params": 33877248,
+   "precision": "fp32",
+   "asset_url": "https://github.com/acl-research/MayaZ/releases/download/v1.0.0/mayaz-32m.onnx",
+   "sha256": "9e3dea779e8b6381eb6a21417e5df1c770bc5c730ee021f6848a2071bc04c6a1",
+   "bench_512mb_0.1cpu": {
+    "p50_ms": 1501,
+    "p95_ms": 5308,
+    "peak_rss_mb": 353.3
+   },
+   "status": "ready",
+   "verdict": "fits",
+   "hf_repo": "acl-research/MayaZ-32M",
+   "hf_file": "mayaz_fp32.onnx",
+   "hf_variants": [
+    "fp32",
+    "int8"
+   ],
+   "max_tokens": 1024
+  },
+  "mayaz-68m": {
+   "file": "mayaz-68m.onnx",
+   "temperatures": "temperatures-mayaz-68m.json",
+   "backbone": "jhu-clsp/ettin-encoder-68m",
+   "params": 71688192,
+   "precision": "int8+embed8",
+   "asset_url": "https://github.com/acl-research/MayaZ/releases/download/v1.0.0/mayaz-68m.onnx",
+   "sha256": "b8856f291988bbf0dac8b5e54ccc5b9ac2148d4c80936b8c1c6b294f26b85cba",
+   "status": "ready",
+   "bench_512mb_0.1cpu": {
+    "p50_ms": 6353,
+    "p95_ms": 17711,
+    "peak_rss_mb": 367.0
+   },
+   "verdict": "fits-but-slow",
+   "hf_repo": "acl-research/MayaZ-68M",
+   "hf_file": "mayaz_int8_embed8.onnx",
+   "hf_variants": [
+    "fp32",
+    "int8",
+    "int8_embed8"
+   ],
+   "max_tokens": 1024
+  }
+ }
+}

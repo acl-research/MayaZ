@@ -1,0 +1,12 @@
+{
+  "name": "mayaz-web",
+  "version": "1.0.0",
+  "description": "MayaZ decision models (17M / 32M / 68M) in the browser and Node via ONNX Runtime Web (WASM).",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/mayaz.js",
+  "dependencies": {
+    "@huggingface/tokenizers": "0.2.0",
+    "onnxruntime-web": "1.30.0"
+  }
+}

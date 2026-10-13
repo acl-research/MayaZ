@@ -1,0 +1,18 @@
+# Render Blueprint: one free web service serving one MayaZ tier (1-click: New > Blueprint > this repo).
+# Switch tiers by editing MAYAZ_MODEL in the dashboard and redeploying (the model is fetched at build time).
+# Measured on 0.1 vCPU / 512 MB: see server/DEPLOY_REPORT.md for each tier's latency and memory.
+services:
+  - type: web
+    name: mayaz-api
+    runtime: docker
+    plan: free
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    envVars:
+      - key: MAYAZ_MODEL
+        value: mayaz-32m  # or mayaz-17m / mayaz-68m
+      - key: MAYAZ_MIN_CONFIDENCE
+        value: "0.5"
+      - key: MAYAZ_RSS_BUDGET_MB
+        value: "400"
