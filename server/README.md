@@ -6,7 +6,7 @@ instance (0.1 vCPU, 512 MB) for every tier. Numbers: `DEPLOY_REPORT.md`.
 | `MAYAZ_MODEL` | parameters | held-out test | p50 on 0.1 vCPU | peak memory |
 |---|---|---|---|---|
 | `mayaz-17m` | 17.7M | .781 | 0.6 s | 242 MB |
-| `mayaz-32m` (default) | 33.9M | .782 | 1.5 s | 353 MB |
+| `mayaz-32m` (default) | 33.9M | .781 | 1.5 s | 353 MB |
 | `mayaz-68m` | 71.7M | .813 | 6.4 s | 367 MB |
 
 ## Deploy to Render (1-click)

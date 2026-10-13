@@ -26,7 +26,7 @@ time.
 | Tier | Backbone | Parameters | Served file | Held-out test | typed-decisions | p50 / peak RSS on 0.1 vCPU, 512 MB |
 |---|---|---|---|---|---|---|
 | **MayaZ-17M** | `jhu-clsp/ettin-encoder-17m` | 17.7M | fp32, 67.6 MB | .781 | .740 | 0.60 s / 242 MB |
-| **MayaZ-32M** (default) | `jhu-clsp/ettin-encoder-32m` | 33.9M | fp32, 129.5 MB | .782 | .732 | 1.50 s / 353 MB |
+| **MayaZ-32M** (default) | `jhu-clsp/ettin-encoder-32m` | 33.9M | fp32, 129.5 MB | .781 | .732 | 1.50 s / 353 MB |
 | **MayaZ-68M** | `jhu-clsp/ettin-encoder-68m` | 71.7M | INT8 + int8 embeddings, 78.2 MB | .813 | .764 | 6.35 s / 367 MB |
 
 - **Held-out test:** accuracy on MayaZ's own held-out split.

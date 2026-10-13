@@ -28,7 +28,7 @@ Held-out accuracy:
 | Tier | Internal held-out test | typed-decisions |
 |---|---|---|
 | 17M | .781 | .740 |
-| 32M | .782 | .732 |
+| 32M | .781 | .732 |
 | 68M | .813 | .764 |
 
 ## Per-bucket latency (p50 / p95, seconds)
